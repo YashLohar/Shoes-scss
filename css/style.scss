@@ -1,0 +1,250 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+     width: 85%;
+     max-width: 1000px;
+     margin: 0 auto;
+     text-align: center;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:4rem;
+}
+.hero{
+  width: 100%;
+  background: url(../images/shoe-3.png), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero .container{
+  padding: 240px 0px;
+}
+.hero .title{
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 4.5rem;
+  color: white;
+  @media(max-width:1000px){
+    font-size: 4rem;
+  }
+  @media(max-width:767px){
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  @media(max-width:514px){
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.hero .slogan{
+  margin-top:2.5rem;
+  color:white;
+  font-size: .85rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+ .btn{
+    display: inline-block;
+    background-color: #faa700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .85rem;
+    border-radius: 4px;
+    transition: transform 250ms 0s ease-in-out,
+                opacity 250ms 0s ease-in-out;
+}
+ .btn:hover,.btn:focus{
+  transform: scale(1.1);
+  opacity: .9;
+}
+.featured{
+  background-color: #eee;
+}
+.heading{
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #17353d;
+  text-align: center;
+  padding: 100px 0px;
+
+  
+  @media(max-width:767px){
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  @media(max-width:514px){
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.featured{
+
+  .item{
+    width: 11rem;
+  }
+
+  &-item{
+    flex-basis: 25%;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+
+    &:hover,&:focus{
+         transform: scale(1);
+
+         .featured-detail{
+           opacity: 1;
+         }
+    }
+
+
+    &::after{
+      content: '';
+      display: block;
+      width: 180px;
+      height: 180px;
+      background: #2193b0;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: -1;
+      
+      @media(max-width: 1000px){
+        top:4%;
+      }
+    }
+
+    .featured-detail{
+      font-weight: 900;
+      color: #17353d;
+      margin-top: 30px;
+      opacity: 0;
+      transition: opacity 250ms linear;
+
+      span{
+        display: block;
+        font-size: 2rem;
+      }
+      @media(max-width:1000px){
+        margin-top: 30px;
+      }
+      
+    }
+    .price{
+      margin-top: 40px;
+      @media(max-width:1000px){
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.card{
+  border-radius: 1rem;
+  margin-bottom: 50px;
+  padding: 50px;
+  text-align: left;
+
+  @media(max-width:977px){
+    text-align: center;
+  }
+  &.card-1{
+    background: radial-gradient(#faa700,#e48d00);
+  }
+  &.card-2{
+    background: radial-gradient(#fce4b3, #eac886);
+  }
+  &.card-3{
+    background: radial-gradient(#6dd5ed, #2193b0);
+  }
+  .card-title{
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 4.5rem;
+    color: white;
+
+    @media(max-width:767px){
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    @media(max-width:514px){
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+  .card-specs{
+    margin-top:2.5rem;
+    color:white;
+    font-size: .85rem;
+    font-weight: 300;
+     margin-bottom: 2.5rem;
+  }
+  .card-image{
+    width: 31rem;
+    float: right;
+    position: relative;
+    left: 100px;
+    bottom: -20px;
+
+    @media(max-width:1089px){
+      width: 25rem;
+      bottom: -60px;
+    }
+    @media(max-width:977px){
+      width: 100%;
+      float: none;
+      top: -70px;
+      bottom: 0px;
+      left: 0;
+    }
+    
+  }
+  .left{
+    float: left;
+    left: -100px;
+
+    @media(max-width:977px){
+      width: 100%;
+      float: none;
+      top: -70px;
+      bottom: 0px;
+      left: 0;
+    }
+  }
+
+  .btn-danger{
+    background-color: #a1173c;
+  }
+  .btn-black{
+    background-color:#2f4858;
+  }
+  .btn-primary{
+    background-color: #008951;
+  } 
+}
+
+
+
+
+
+
+

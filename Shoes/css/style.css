@@ -1,0 +1,139 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 150px 0px;
+  color: white;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 5rem;
+}
+
+.slogan {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #faa700;
+  padding: 10px 15px;
+  margin-top: 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: .9;
+}
+
+.hero {
+  background-image: url(../images/shoe-3.png), radial-gradient(#444, #111);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background-blend-mode: multiply;
+  }
+}
+
+main .featured {
+  text-align: center;
+  width: 100%;
+  background-color: #eee;
+}
+
+main .featured-title {
+  font-size: 3.5rem;
+  padding: 80px 0px;
+  color: #17353d;
+}
+
+main .featured-products {
+  width: 85%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .featured-products .products {
+  width: 25%;
+  gap: 4rem;
+}
+
+main .featured-products .products .product-item {
+  width: 100%;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  position: relative;
+}
+
+main .featured-products .products .product-item:hover, main .featured-products .products .product-item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main .featured-products .products .product-item:hover .product-price, main .featured-products .products .product-item:focus .product-price {
+  opacity: 1;
+}
+
+main .featured-products .products .product-item::after {
+  content: '';
+  display: block;
+  width: 30%;
+  background-color: #17353d;
+  position: absolute;
+}
+
+main .featured-products .products .product-price {
+  font-weight: 900;
+  color: #17353d;
+  opacity: 0;
+  -webkit-transition: opacity 250ms 0s linear;
+  transition: opacity 250ms 0s linear;
+}
+
+main .featured-products .products .product-price span {
+  font-size: 1.5rem;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
